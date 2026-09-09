@@ -20,7 +20,9 @@ jobs:
       - name: Build package
         env:
           THEOS: /opt/theos
-        run: make package
+        run: |
+          export PATH="$THEOS/bin:$PATH"
+          make package
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
