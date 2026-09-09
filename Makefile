@@ -1,9 +1,9 @@
 ARCHS = arm64 arm64e
-TARGET = iphone:clang:15.0:15.0
-INSTALL_TARGET_PROCESSES = SpringBoard
+# 改动：删掉中间的15.0，使用环境自带SDK，TARGET最后面的15.0代表最低支持iOS15
+TARGET = iphone:clang::15.0
 
-# 关键！告诉Theos过滤器plist名字
 FILTER = MangoAuthBypass.plist
+INSTALL_TARGET_PROCESSES = SpringBoard
 
 include $(THEOS)/makefiles/common.mk
 
