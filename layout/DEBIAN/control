@@ -1,0 +1,9 @@
+Package: com.go.mango.authbypass
+Name: MangoAuthBypass
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: 芒果授权绕过补丁（配合原版芒果使用）
+Maintainer: JudeGor1129
+Author: JudeGor1129
+Section: Tweaks
+Depends: mobilesubstrate, com.go.mango
