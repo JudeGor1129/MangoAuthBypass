@@ -18,6 +18,8 @@ jobs:
           git clone --recursive --depth 1 https://github.com/theos/theos.git /opt/theos
 
       - name: Build package
+        env:
+          THEOS: /opt/theos
         run: make package
 
       - name: Upload artifact
