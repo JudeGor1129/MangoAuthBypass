@@ -3,6 +3,7 @@
 #import <UIKit/UIKit.h>
 #import <string.h>
 #import <mach-o/dyld.h>
+#import <dlfcn.h>
 
 //屏蔽弹窗浮窗
 %hook MGFGHUDView
