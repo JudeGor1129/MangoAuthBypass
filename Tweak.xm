@@ -1,4 +1,7 @@
 #import <substrate.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <string.h>
 #import <mach-o/dyld.h>
 %hook MGFGHUDView
 - (void)show { return; }
