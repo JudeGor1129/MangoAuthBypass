@@ -17,6 +17,9 @@ jobs:
           sudo chown $(whoami) /opt/theos
           git clone --recursive --depth 1 https://github.com/theos/theos.git /opt/theos
 
+      - name: Install ldid
+        run: brew install ldid
+
       - name: Build package
         env:
           THEOS: /opt/theos
