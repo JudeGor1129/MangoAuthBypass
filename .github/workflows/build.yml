@@ -32,3 +32,13 @@ jobs:
         with:
           name: MangoAuthBypass
           path: packages/*.deb
+
+  # --- 编译完成后自动推送到 Jude 的越狱源 ---
+  publish:
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    uses: JudeGor1129/repo/.github/workflows/publish-deb.yml@main
+    with:
+      artifact_name: MangoAuthBypass
+    secrets:
+      REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
